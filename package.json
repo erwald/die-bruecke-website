@@ -1,0 +1,13 @@
+{
+  "name": "die_bruecke",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "description": "Website for the record label Die Brücke.",
+  "dependencies": {
+    "@11ty/eleventy": "^0.5.4"
+  },
+  "license": "ISC"
+}
