@@ -1,0 +1,35 @@
+---
+title: Releases
+layout: layouts/base.njk
+---
+<table>
+  <tr>
+    <td>Cat #</td>
+    <td>Artist</td>
+    <td>Title</td>
+    <td>Release Date</td>
+  </tr>
+{% macro column(url) %}
+<td class="releases-column">
+  <a href="{{ url | url }}" class="releases-link">
+    {{ caller() }}
+  </a>
+</td>
+{% endmacro %}
+{% for release in collections.release|sort(attribute='catalogNumber') %}
+    <tr class="releases-row">
+      {% call column(release.url) %}
+      DIE-BRVECKE-{{release.data.catalogNumber | paddedCatalogNumber}}
+      {% endcall %}
+      {% call column(release.url) %}
+      {{ release.data.artistName }}
+      {% endcall %}
+      {% call column(release.url) %}
+      {{ release.data.releaseName }}
+      {% endcall %}
+      {% call column(release.url) %}
+      <time>{{ release.data.date | readableDate }}</time>
+      {% endcall %}
+    </tr>
+{% endfor %}
+</table>

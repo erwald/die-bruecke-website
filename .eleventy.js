@@ -18,6 +18,7 @@ module.exports = function (eleventyConfig) {
             "njk",
             "html",
             "png",
+            "jpg",
         ],
         passthroughFileCopy: true,
         markdownTemplateEngine: "liquid",

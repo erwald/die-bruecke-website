@@ -1,0 +1,15 @@
+---
+title: Releases
+layout: layouts/base.njk
+---
+<h2 class="release-title">{{ artistName }} – {{ releaseName }}</h2>
+
+<div class="release-catalogue-number">DIE-BRVECKE-{{catalogNumber | paddedCatalogNumber}}</div>
+
+<img class="release-cover-art" src="{{ coverArt }}" alt="{{ releaseName }} cover art" />
+
+<div class="release-content">
+    {{ content | safe }}
+</div>
+
+<div class="release-date">Released on <time>{{ date | readableDate }}</time>.</div>
