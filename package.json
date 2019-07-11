@@ -6,8 +6,10 @@
     "start": "eleventy --serve"
   },
   "description": "Website for the record label Die Brücke.",
-  "dependencies": {
-    "@11ty/eleventy": "^0.5.4"
-  },
-  "license": "ISC"
+  "dependencies": {},
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.5.4",
+    "luxon": "^1.16.1"
+  }
 }
