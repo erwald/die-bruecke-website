@@ -1,15 +1,16 @@
 ---
 pages:
-  - releases
-  - manifesto
-  - bandcamp
+  - {name: Releases, url: /releases}
+  - {name: Manifesto, url: /manifesto}
+  - {name: Bandcamp, url: https://bruecke.bandcamp.com/}
+  - {name: Facebook, url: https://www.facebook.com/brueckemusic}
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title or metadata.title }}</title>
+    <title>{{ metadata.title }} - {{ title or 'a Digital and Tape Record Label' }}</title>
     <meta name="Description" content="{{ renderData.description or description or metadata.description }}">
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
@@ -22,7 +23,7 @@ pages:
       <ul class="nav">
         {%- for page in pages -%}
         <li class="page-item{% if page.url == page.url %} page-item-active{% endif %}">
-          <a href="{{ page | url }}">{{ page }}</a>
+          <a href="{{ page.url | url }}">{{ page.name }}</a>
         </li>
         {%- endfor -%}
       </ul>
