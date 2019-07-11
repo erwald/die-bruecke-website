@@ -19,7 +19,7 @@ layout: layouts/base.njk
 {% for release in collections.release|sort(attribute='catalogNumber') %}
     <tr class="releases-row">
       {% call column(release.url) %}
-      DIE-BRVECKE-{{release.data.catalogNumber | paddedCatalogNumber}}
+      {{release.data.catalogNumber | paddedCatalogNumber}}
       {% endcall %}
       {% call column(release.url) %}
       {{ release.data.artistName }}
