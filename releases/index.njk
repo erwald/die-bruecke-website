@@ -9,14 +9,14 @@ layout: layouts/base.njk
     <td>Title</td>
     <td>Release Date</td>
   </tr>
-{% macro column(url) %}
-<td class="releases-column">
-  <a href="{{ url | url }}" class="releases-link">
-    {{ caller() }}
-  </a>
-</td>
-{% endmacro %}
-{% for release in collections.release|sort(attribute='catalogNumber') %}
+  {% macro column(url) %}
+    <td class="releases-column">
+      <a href="{{ url | url }}" class="releases-link">
+        {{ caller() }}
+      </a>
+    </td>
+  {% endmacro %}
+  {% for release in collections.release | sort(attribute = 'catalogNumber') %}
     <tr class="releases-row">
       {% call column(release.url) %}
       {{release.data.catalogNumber | paddedCatalogNumber}}
@@ -31,5 +31,5 @@ layout: layouts/base.njk
       <time>{{ release.data.date | readableDate }}</time>
       {% endcall %}
     </tr>
-{% endfor %}
+  {% endfor %}
 </table>
