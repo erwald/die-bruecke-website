@@ -19,10 +19,12 @@ pages:
   <body>
     <header>
       <div class="topNav">
-        <h1 class="home"><a href="{{ '/' | url }}">Die Brücke</a></h1>
+        <h1 class="home">
+          <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+        </h1>
         <ul class="menu">
           {%- for page in pages -%}
-          <li class="page-item{% if page.url == page.url %} page-item-active{% endif %}">
+          <li class="page-item">
             <a href="{{ page.url | url }}">{{ page.name }}</a>
           </li>
             {%- endfor -%}
