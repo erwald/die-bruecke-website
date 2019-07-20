@@ -18,15 +18,16 @@ pages:
   </head>
   <body>
     <header>
-    <img src="/img/die_bruecke_2.png" alt="Die Brücke" width="200px" />
-      <h1 class="home"><a href="{{ '/' | url }}">{{ metadata.title }}</a></h1>
-      <ul class="nav">
-        {%- for page in pages -%}
-        <li class="page-item{% if page.url == page.url %} page-item-active{% endif %}">
-          <a href="{{ page.url | url }}">{{ page.name }}</a>
-        </li>
-        {%- endfor -%}
-      </ul>
+      <div class="topNav">
+        <h1 class="home"><a href="{{ '/' | url }}">Die Brücke</a></h1>
+        <ul class="menu">
+          {%- for page in pages -%}
+          <li class="page-item{% if page.url == page.url %} page-item-active{% endif %}">
+            <a href="{{ page.url | url }}">{{ page.name }}</a>
+          </li>
+            {%- endfor -%}
+        </ul>
+      </div>
     </header>
 
     <main>
