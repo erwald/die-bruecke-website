@@ -1,10 +1,19 @@
 * {
   box-sizing: border-box;
 }
-
-body {
-  margin: 30;
-  background-color: white
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Almendra', serif;
+  color: black;
+  max-width: 600px;
+  margin: auto;
+}
+::selection {
+  background: #ffb7b7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffb7b7; /* Gecko Browsers */
 }
 
 ul {
@@ -14,8 +23,8 @@ ul {
 .topNav {
   overflow: hidden;
   display: flex;
-  justify-content:space-around;
-  font-family: 'Antic Didone', serif;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .topNav a {
@@ -30,70 +39,93 @@ ul {
 .home {
   display: flex;
   margin-top: 55px;
-  justify-content:flex-start;
-  letter-spacing: 2px;
+  font-family: 'Almendra SC', serif;
+  letter-spacing: 1px;
+  width: 30px;
 }
 
 .menu {
   display: flex;
-  margin: 60px;
-  justify-content:flex-end;
+  margin-top: 55px;
+  flex-wrap: wrap;
 }
 
 .page-item {
-  margin: 10px;
+  margin-left: 20px;
 }
 
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+.logo {
+ width: 100%;
+ height: auto;
+ opacity: 0.07;
+ transition: opacity 2s ease-in-out;
 }
 
 .logo:hover {
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  zoom: 1;
-}
-
-p {
-  text-align: center;
-  margin-bottom: 40px;
+  opacity: 1;
 }
 
 table {
-  border-collapse: collapse;
-  width: 70%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
-  font-family: 'Antic Didone', serif;
+  width: 100%;
+  margin-top: 40px;
 }
 
 th, td {
-  padding: 0.35rem;
   text-align: left;
 }
 
 td a {
   text-decoration: none;
-  color: red;
+  color: #1f1f2e;
 }
 
 .releases-row:hover {
-  background: rgb(240, 240, 240);
   opacity: 0.5;
 }
 
-ol {
-  width: 70%;
+.release-title {
+  text-align: center;
+}
+
+.release-catalogue-number {
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Almendra SC', serif;
+}
+
+img {
+  display: block;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.release-content {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  max-width: 600px;
+  word-spacing: 3px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+.release-content p {
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-li {
-  margin-bottom: 15px;
+.release-date {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  color: #1f1f2e;
+}
+
+ol {
+  display: block;
+  margin-top: 40px;
+  text-align: justify;
+  text-justify: inter-word;
+  padding-inline-start: 0px;
 }
