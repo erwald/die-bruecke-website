@@ -1,10 +1,11 @@
 * {
   box-sizing: border-box;
 }
-html, body {
+html,
+body {
   padding: 0;
   margin: 0;
-  font-family: 'Almendra', serif;
+  font-family: "Almendra", serif;
   color: black;
   max-width: 600px;
   margin: auto;
@@ -39,7 +40,7 @@ ul {
 .home {
   display: flex;
   margin-top: 55px;
-  font-family: 'Almendra SC', serif;
+  font-family: "Almendra SC", serif;
   letter-spacing: 1px;
   width: 30px;
 }
@@ -55,10 +56,10 @@ ul {
 }
 
 .logo {
- width: 100%;
- height: auto;
- opacity: 0.07;
- transition: opacity 2s ease-in-out;
+  width: 100%;
+  margin: 2ch 0;
+  opacity: 0.07;
+  transition: opacity 2s ease-in-out;
 }
 
 .logo:hover {
@@ -70,7 +71,8 @@ table {
   margin-top: 40px;
 }
 
-th, td {
+th,
+td {
   text-align: left;
 }
 
