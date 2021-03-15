@@ -131,6 +131,7 @@ ol {
   text-align: justify;
   text-justify: inter-word;
   padding-inline-start: 0px;
+  list-style-position: inside;
 }
 
 @media only screen and (max-width: 640px) {
@@ -151,6 +152,7 @@ ol {
     flex-direction: column;
     margin-top: 0px;
     margin-left: 0px;
+    font-size: large;
   }
   body {
     padding: 10px;
@@ -167,6 +169,9 @@ ol {
  tr {
   vertical-align: 0mm;
   color: #6d6d6d;
+ }
+ ol {
+   margin-top: 0;
  }
  
 }
